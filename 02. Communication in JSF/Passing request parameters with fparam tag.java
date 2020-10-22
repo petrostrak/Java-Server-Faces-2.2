@@ -72,9 +72,9 @@ private String playerSurname;
 */
 
 <h:link value="Send Rafael Nadal" outcome="result">
-<f:param id="playerName" name="playerNameParam" value="Rafael"/>
-<f:param id="playerSurname" name="playerSurnameParam"
-value="Nadal"/>
+	<f:param id="playerName" name="playerNameParam" value="Rafael"/>
+	<f:param id="playerSurname" name="playerSurnameParam"
+	value="Nadal"/>
 </h:link>
 
 /*
