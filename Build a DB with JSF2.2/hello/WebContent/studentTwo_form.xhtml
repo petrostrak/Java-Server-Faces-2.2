@@ -23,6 +23,13 @@
 			<f:selectItem itemValue="UK" itemLabel="UK" />
 			<f:selectItem itemValue="US" itemLabel="US" />
 		</h:selectOneMenu>
+		<br/><br/>
+		<h:selectOneRadio value="#{studentTwo.language}">
+			<f:selectItem itemValue="Java" itemLabel="Java" />
+			<f:selectItem itemValue="C#" itemLabel="C#" />
+			<f:selectItem itemValue="PHP" itemLabel="PHP" />
+			<f:selectItem itemValue="Go" itemLabel="Go" />
+		</h:selectOneRadio>
 		<h:commandButton value="Submit" action="studentTwo_response"></h:commandButton>
 	</h:form>
 </body>
