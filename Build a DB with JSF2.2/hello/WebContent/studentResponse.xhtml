@@ -9,6 +9,13 @@
 
 <body>
 	The student is confirmed #{student.firstName} #{student.lastName}.
+	Student's favorite programming language:
+	
+	<ul>
+		<ui:repeat var="tempLanguage" value="#{student.favLanguage}">
+			<li> #{tempLanguage} </li>
+		</ui:repeat>
+	</ul>
 </body>
 
 </html>
