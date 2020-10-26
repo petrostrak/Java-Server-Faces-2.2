@@ -6,9 +6,14 @@ import javax.faces.bean.ManagedBean;
 public class Student {
 	private String firstName;
 	private String lastName;
-	private String[] favLanguage;
+	private String[] favLanguage = new String[3];
 	
-	public Student() {}
+	public Student() {
+		// pre-populate the forms
+		firstName = "Petros";
+		lastName = "Trakadas";
+		favLanguage[0] = "Go";
+	}
 
 	public String getFirstName() {
 		return firstName;
