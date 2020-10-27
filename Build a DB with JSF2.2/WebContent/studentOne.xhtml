@@ -48,6 +48,15 @@
 						 </h:inputText>
 			<h:message for="postalCode" styleClass="error"></h:message>
 			<br /><br />
+			Phone Number: <h:inputText value="#{studentOne.phoneNumber}"
+									   label="Phone Number"
+									   required="true"
+									   requiredMessage="The phone number must follow the form of xxx-xxx-xxxx"
+									   id="phoneNumber">
+						  	<f:validateRegex pattern="\d{3}-\d{3}-\d{4}" />
+						  </h:inputText>
+			<h:message for="phoneNumber" styleClass="error"></h:message>
+			<br /><br />
 			<h:commandButton value="Submit" action="studentOneResponse"></h:commandButton>
 		</h:form>
 		
