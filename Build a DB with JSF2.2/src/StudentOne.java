@@ -1,4 +1,8 @@
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 @ManagedBean
 public class StudentOne {
@@ -8,11 +12,26 @@ public class StudentOne {
 	private int freePass;
 	private String postalCode;
 	private String phoneNumber;
+	private String CourseCode;
 	
 	public StudentOne() {}
 
 	public String getFirstName() {
 		return firstName;
+	}
+	
+	public void validateCourseCode(FacesContext context, UIComponent component, Object userInput) throws ValidatorException {
+		if(userInput == null) {
+			return;
+		}
+		
+		String data = userInput.toString();
+		
+		// User input must start with PT
+		if(!data.startsWith("PT")) {
+			FacesMessage message = new FacesMessage("Course code must start with PT");
+			throw new ValidatorException(message);
+		}
 	}
 
 	public void setFirstName(String firstName) {
@@ -57,6 +76,14 @@ public class StudentOne {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	public String getCourseCode() {
+		return CourseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		CourseCode = courseCode;
 	}
 	
 }

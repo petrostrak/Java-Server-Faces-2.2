@@ -57,6 +57,16 @@
 						  </h:inputText>
 			<h:message for="phoneNumber" styleClass="error"></h:message>
 			<br /><br />
+			Course Code: <h:inputText value="#{studentOne.courseCode}"
+									  label="Course Code"
+									  required="true"
+									  requiredMessage="Course code must start with PT"
+									  id="courseCode"
+									  validator="#{studentOne.validateCourseCode}">
+			
+						 </h:inputText>
+			<h:message for="courseCode" styleClass="error"></h:message>
+			<br /><br />
 			<h:commandButton value="Submit" action="studentOneResponse"></h:commandButton>
 		</h:form>
 		
