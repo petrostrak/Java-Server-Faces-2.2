@@ -30,6 +30,24 @@
 								requiredMessage="Please type your email"></h:inputText>
 			<h:message for="email" styleClass="error"></h:message>
 			<br/><br/>
+			Free Passes: <h:inputText value="#{studentOne.freePass}"
+									  label="Free Passes"
+									  id="freePasses"
+									  required="true"
+									  requiredMessage="Free passes must be between 0 and 10">
+						 	<f:validateLongRange minimum="0" maximum="10"></f:validateLongRange>
+						 </h:inputText>
+			<h:message for="freePasses" styleClass="error"></h:message>
+			<br /><br />
+			Postal Code: <h:inputText value="#{studentOne.postalCode}"
+									  label="Postal Code"
+									  id="postalCode"
+									  required="true"
+									  requiredMessage="Postal code must have 5 characters">
+						 	<f:validateLength minimum="5" maximum="5"></f:validateLength>
+						 </h:inputText>
+			<h:message for="postalCode" styleClass="error"></h:message>
+			<br /><br />
 			<h:commandButton value="Submit" action="studentOneResponse"></h:commandButton>
 		</h:form>
 		
